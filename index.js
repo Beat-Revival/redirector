@@ -1,6 +1,9 @@
-import { createServer } from 'node:http'
+const express = require('express')
+
+const app = express()
 
 const hostname = 'localhost'
+const ip = '7F000001'
 const blazePort = 25565
 
 const msgData = {
@@ -41,7 +44,7 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>\
 <address member="0">\
 <valu>\
 <hostname>${hostname}</hostname>\
-<ip>null</ip>\
+<ip>${ip}</ip>\
 <port>${blazePort}</port>\
 </valu>\
 </address>\
@@ -50,18 +53,19 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>\
 <defaultdnsaddress>0</defaultdnsaddress>\
 </serverinstanceinfo>`
 
-const server = createServer((req, res) => {
-  if (req.url === '/em/v2/messages') {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify(msgData))
-    console.log('Message Request')
-  } else {
-    res.setHeader('Content-Type', 'application/xml')
-    res.end(xml)
-    console.log('Redirected')
-  }
+app.use(express.static('public'))
+
+app.get('/redirector/getServerInstance', (req, res) => {
+  res.type('xml')
+  res.send(xml)
+  console.log('Redirected')
 })
 
-server.listen(42230, () =>
+app.get('/em/v2/messages', (req, res) => {
+  res.json(msgData)
+  console.log('Message Request')
+})
+
+app.listen(42230, () =>
   console.log('Redirector started on port 42230')
 )
