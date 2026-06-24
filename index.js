@@ -1,4 +1,5 @@
 const express = require('express')
+const morgan = require('morgan')
 
 const app = express()
 
@@ -53,19 +54,18 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>\
 <defaultdnsaddress>0</defaultdnsaddress>\
 </serverinstanceinfo>`
 
+app.use(morgan('short'))
 app.use(express.static('public'))
 
 app.get('/redirector/getServerInstance', (req, res) => {
   res.type('xml')
   res.send(xml)
-  console.log('Redirected')
 })
 
 app.get('/em/v2/messages', (req, res) => {
   res.json(msgData)
-  console.log('Message Request')
 })
 
-app.listen(42230, () =>
+app.listen(42230, () => {
   console.log('Redirector started on port 42230')
-)
+})
