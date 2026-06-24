@@ -3,9 +3,9 @@ const morgan = require('morgan')
 
 const app = express()
 
-const hostname = 'localhost'
-const ip = '7F000001'
-const blazePort = 25565
+const hostname = process.env.HOSTNAME || 'localhost'
+const ip = process.env.SERVER_IP || 2130706433
+const blazePort = process.env.PORT || 42127
 
 const msgData = {
   messages: [
