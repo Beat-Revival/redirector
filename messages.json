@@ -1,0 +1,60 @@
+{
+  "messages": [
+    {
+      "destination": "16679",
+      "text": "Welcome, Runner! Directly from the DICE developers, here are 3 great tips that will help you out in the city of Glass:\n1) Attacks from above, ziplines, or swingbars always deal much higher damage to enemies.\n2) The Disruptor is great for taking down those pesky security cameras.\n3) The unlockable movement skills will greatly help when trying to beat timed missions.\n\nFor more tips see mirrorsedge.com",
+      "url": "http://localhost:42230/images/1462367022977a608675f-9298-47f1-a1dc-5e2b20c2f6b1.png",
+      "tracking-tag": "1",
+      "data": [
+        {
+          "Key": "TitleCaption",
+          "Value": "Welcome, Runner"
+        },
+        {
+          "Key": "Subcaption",
+          "Value": "We look forward to seeing you in the city of Glass"
+        },
+        {
+          "Key": "ActionLabel",
+          "Value": "Top 3 Tips & Tricks"
+        },
+        {
+          "Key": "PopupActionLabel",
+          "Value": ""
+        },
+        {
+          "Key": "ActionPath",
+          "Value": ""
+        }
+      ]
+    },
+    {
+      "destination": "16682",
+      "text": "In a new Developer Diary, you will learn how to create your own Time Trials among the rooftops of Glass. The DICE team will also explain how to take on the challenging Dashes they’ve created. Go for the record time by perfecting your technique and route!\n\nAnother Social Play feature is the Beat Location Emitters, which you can place in the city of Glass for your friends to find. Furthermore, using the Companion App and website, you can customize your social profile and browse through leaderboards.\n\nEnjoy the video - and stay tuned to MirrorsEdge.com for more game news.",
+      "url": "http://localhost:42230/images/1462367022856252c2c03-4082-4562-9997-c5bc3ca776c3.png",
+      "tracking-tag": "2",
+      "data": [
+        {
+          "Key": "TitleCaption",
+          "Value": "Dev Diary: Social Play"
+        },
+        {
+          "Key": "Subcaption",
+          "Value": "Time Trials, Dashes, and other Social Play features"
+        },
+        {
+          "Key": "ActionLabel",
+          "Value": "Learn more"
+        },
+        {
+          "Key": "PopupActionLabel",
+          "Value": ""
+        },
+        {
+          "Key": "ActionPath",
+          "Value": ""
+        }
+      ]
+    }
+  ]
+}
